@@ -1,0 +1,14 @@
+{
+	"name": "dc-snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": [
+					"javascript"
+				],
+				"path": "./javascript.json"
+			}
+		]
+	}
+}
+

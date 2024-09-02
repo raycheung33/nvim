@@ -1,0 +1,133 @@
+{
+  "Console log": {
+    "prefix": "l",
+    "body": ["console.log(`$1` )"]
+  },
+
+  "dcStore": {
+    "prefix": "dcStore",
+    "body": [
+      "import {types as tt} from 'mobx-state-tree';",
+      "",
+      "const Store = tt",
+      ".model({",
+      "storeName: '$1Store',",
+      "id: tt.optional(tt.identifier, ''),",
+      "})",
+      "",
+      "export default Store;"
+    ]
+  },
+
+  "dcView": {
+    "prefix": "dcView",
+    "body": [
+      "import * as React from 'react';",
+      "import {useStore} from 'mobx-store-provider';",
+      "import {observer} from 'mobx-react-lite';",
+      "import RootStore from '../root/Store';",
+      "import SaveBottomView from '../components/SaveBottomView';",
+      "",
+      "const DCView = ({route, navigation}) => {",
+      "  const root = useStore(RootStore);",
+      "  const self = root.navigationStore.storeFromKey(route.params.key);",
+      "  const options = route.params.options;",
+      "  return <SaveBottomView style={{flex: 1}}></SaveBottomView>;",
+      "};",
+      "",
+      "export default observer(DCView);"
+    ]
+  },
+
+  "dcIcon": {
+    "prefix": "dcIcon",
+    "body": [
+      "import * as React from 'react';",
+      "import { Image } from 'react-native';",
+      "",
+      "const Icon = ({ focused, color, size }) => {",
+      "	return (",
+      "		<Image",
+      "			style={{",
+      "				tintColor: color,",
+      "				resizeMode: 'contain',",
+      "				height: size,",
+      "				width: size,",
+      "			}}",
+      "			source={require('./res/$1.png')}",
+      "		/>",
+      "	);",
+      "};",
+      "",
+      "export default Icon;"
+    ]
+  },
+
+  "dcTab": {
+    "prefix": "dcTab",
+    "body": [
+      "import * as React from 'react';",
+      "import RootStore from '../root/Store';",
+      "import { useStore } from 'mobx-store-provider';",
+      "import Stack from '../app/Stack';",
+      "import $1 from './View';",
+      "import { observer } from 'mobx-react-lite';",
+      "",
+      "const Tab = () => {",
+      "	const root = useStore(AppStore);",
+      "	const str = root.str;",
+      "	return (",
+      "		<Stack.Navigator>",
+      "			<Stack.Group>",
+      "				<Stack.Screen",
+      "					name={'$1'}",
+      "					component={$1}",
+      "				/>",
+      "			</Stack.Group>",
+      "		</Stack.Navigator>",
+      "	);",
+      "};",
+      "",
+      "export default observer(Tab);"
+    ]
+  },
+
+  "dcString": {
+    "prefix": "dcString",
+    "body": ["$1: tt.optional(tt.string, ''),"]
+  },
+
+  "dcActions": {
+    "prefix": "dcActions",
+    "body": [".actions(self => ({", "$1", "}))"]
+  },
+
+  "dcViews": {
+    "prefix": "dcViews",
+    "body": [".views(self => ({", "$1", "}))"]
+  },
+
+  "dcFlow": {
+    "prefix": "dcFlow",
+    "body": ["request: flow(function* request() {", "$1", "}),"]
+  },
+
+  "dcComponent": {
+    "prefix": "dcComponent",
+    "body": [
+      "import * as React from 'react';",
+      "import {View} from 'react-native'",
+      "import {useStore} from 'mobx-store-provider';",
+      "import {observer} from 'mobx-react-lite';",
+      "import RootStore from '../root/Store';",
+      "",
+      "const DCView = props => {",
+      "  const root = useStore(RootStore);",
+      "  const {style, ...rest} = props;",
+      "  return <View style={{...style}} {...rest}></View>;",
+      "};",
+      "",
+      "export default observer(DCView);"
+    ]
+  }
+}
