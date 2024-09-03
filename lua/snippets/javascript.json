@@ -159,5 +159,35 @@
       "    </View>",
       "  );"
     ]
+  },
+
+  "dcFlatList2Column": {
+    "prefix": "dcFlatList2Column",
+    "body": [
+      "const saveAreaInsets = useSafeAreaInsets();",
+      "    const {width: screenWidth} = useWindowDimensions();",
+      "    const itemWidth = (screenWidth - Style.gap) / 2;",
+      "",
+      "    const renderItem = ({item}) => <View style={{width: itemWidth}}><ItemView item={item} /></View>;",
+      "    const keyExtractor = item => item.id;",
+      "",
+      "    return (",
+      "      <View style={{flex: 1, backgroundColor: color.bg}}>",
+      "        <FlatList",
+      "          columnWrapperStyle={{ gap: Style.gap}}",
+      "          numColumns={2}",
+      "          data={self.items.slice()}",
+      "          renderItem={renderItem}",
+      "          keyExtractor={keyExtractor}",
+      "          contentContainerStyle={{",
+      "            paddingTop: saveAreaInsets.top,",
+      "            paddingBottom: saveAreaInsets.bottom,",
+      "            gap: Style.gap,",
+      "          }}",
+      "        />",
+      "      </View>",
+      "    );",
+      "  };"
+    ]
   }
 }
