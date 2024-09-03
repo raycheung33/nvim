@@ -41,3 +41,8 @@ map("v", "y", "ygv", opts)
 
 -- Map space z to add double quotes to selected lines and connect them with commas
 map("v", "<leader>z", ':s/\\(.*\\)\\n/\\"\\1",\\r<CR>:noh<CR>', opts)
+
+-- Map numbers to tabs
+map("n", "1", ":1tabn<CR>", opts)
+map("n", "2", ":2tabn<CR>", opts)
+map("n", "3", ":3tabn<CR>", opts)
