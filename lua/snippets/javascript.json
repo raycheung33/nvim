@@ -129,5 +129,10 @@
       "",
       "export default observer(DCView);"
     ]
+  },
+
+  "dcCommentJSX": {
+    "prefix": "dcCommentJSX",
+    "body": ["{/* $1 */}"]
   }
 }

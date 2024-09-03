@@ -33,10 +33,11 @@ map("v", "R", "P", { noremap = true, silent = true })
 map("n", "<Esc>", ":noh<CR>")
 
 -- Map d and dd to black hole instead of register
-map("n", "d", "\"_d", opts)
-map("n", "dd", "\"_dd", opts)
+map("n", "d", '"_d', opts)
+map("n", "dd", '"_dd', opts)
 
 -- Map yank to yank and keep selection
 map("v", "y", "ygv", opts)
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- Map space z to add double quotes to selected lines and connect them with commas
+map("v", "<leader>z", ':s/\\(.*\\)\\n/\\"\\1",\\r<CR>:noh<CR>', opts)

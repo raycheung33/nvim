@@ -37,5 +37,27 @@ return {
         "json",
       },
     },
-  }
+  },
+
+  -- Session save and load
+  -- save location: ~/.local/share/nvim/sessions
+  {
+    "olimorris/persisted.nvim",
+    lazy = false,
+    event = "VimEnter",
+    config = function()
+      require("persisted").setup {
+        save_dir = vim.fn.expand(vim.fn.stdpath "data" .. "/sessions/"),
+        use_git_branch = true,
+        autosave = true,
+        autoload = true,
+        on_autoload_no_session = function()
+          vim.notify "No existing session to load."
+        end,
+        should_save = function()
+          return true
+        end,
+      }
+    end,
+  },
 }
