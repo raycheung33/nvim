@@ -1,14 +1,19 @@
 {
-	"name": "dc-snippets",
-	"contributes": {
-		"snippets": [
-			{
-				"language": [
-					"javascript"
-				],
-				"path": "./javascript.json"
-			}
-		]
-	}
+  "name": "dc-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript"
+        ],
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "json"
+        ],
+        "path": "./json.json"
+      }
+    ]
+  }
 }
-
