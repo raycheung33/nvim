@@ -134,5 +134,30 @@
   "dcCommentJSX": {
     "prefix": "dcCommentJSX",
     "body": ["{/* $1 */}"]
+  },
+
+  "dcFlatList": {
+    "prefix": "dcFlatList",
+    "body": [
+      "        const saveAreaInsets = useSafeAreaInsets();",
+      "",
+      "  const renderItem = ({item}) => <ItemView item={item} />;",
+      "  const keyExtractor = item => item.id;",
+      "",
+      "  return (",
+      "    <View style={{flex: 1}}>",
+      "      <FlatList",
+      "        data={self.items.slice()}",
+      "        renderItem={renderItem}",
+      "        keyExtractor={keyExtractor}",
+      "        contentContainerStyle={{",
+      "          paddingTop: saveAreaInsets.top,",
+      "          paddingBottom: saveAreaInsets.bottom,",
+      "          gap: Style.gap,",
+      "        }}",
+      "      />",
+      "    </View>",
+      "  );"
+    ]
   }
 }
