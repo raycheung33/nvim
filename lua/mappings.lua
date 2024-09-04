@@ -30,7 +30,7 @@ hop.setup {
 map("v", "R", "P", { noremap = true, silent = true })
 
 -- Map Esc to Cancel find and replace using ':/'
-map("n", "<Esc>", ":noh<CR>")
+map("n", "<Esc>", ":noh<CR>", opts)
 
 -- Map d and dd to black hole instead of register
 map("n", "d", '"_d', opts)
@@ -47,3 +47,6 @@ map("n", "1", ":1tabn<CR>", opts)
 map("n", "2", ":2tabn<CR>", opts)
 map("n", "3", ":3tabn<CR>", opts)
 map("n", "4", ":4tabn<CR>", opts)
+
+-- Map ctrl n to exit visual mode so that next time we can show nvim tree
+map("v", "<C-n>", "<Ecs>")
