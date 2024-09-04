@@ -10,9 +10,8 @@
       "import {types as tt} from 'mobx-state-tree';",
       "",
       "const Store = tt",
-      ".model({",
-      "storeName: '$1Store',",
-      "id: tt.optional(tt.identifier, ''),",
+      ".model('$1', {",
+      "$2",
       "})",
       "",
       "export default Store;"
@@ -95,6 +94,11 @@
   "dcString": {
     "prefix": "dcString",
     "body": ["$1: tt.optional(tt.string, ''),"]
+  },
+
+  "dcID": {
+    "prefix": "dcID",
+    "body": ["id: tt.optional(tt.identifier, ''),"]
   },
 
   "dcActions": {
