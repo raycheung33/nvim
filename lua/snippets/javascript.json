@@ -216,5 +216,23 @@
       "",
       "  export default observer(DCView);"
     ]
+  },
+
+  "dcUseLayoutEffect": {
+    "prefix": "dcUseLayoutEffect",
+    "body": [
+      "      React.useLayoutEffect(() => {",
+      "      navigation.setOptions({",
+      "        headerTitle: str.t('$1'),",
+      "        headerLargeTitle: true,",
+      "        headerStyle: {",
+      "          backgroundColor: color.bg,",
+      "        },",
+      "        headerTitleStyle: {",
+      "          color: color.primary,",
+      "        },",
+      "      });",
+      "    }, []);"
+    ]
   }
 }

@@ -48,5 +48,7 @@ map("n", "2", ":2tabn<CR>", opts)
 map("n", "3", ":3tabn<CR>", opts)
 map("n", "4", ":4tabn<CR>", opts)
 
--- Map ctrl n to exit visual mode so that next time we can show nvim tree
-map("v", "<C-n>", "<Ecs>")
+-- Map space fe to open file explorer
+map("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)
+map("v", "<leader>fe", "<Esc>:NvimTreeToggle<CR>", opts)
+
