@@ -234,5 +234,48 @@
       "      });",
       "    }, []);"
     ]
+  },
+
+  "dcEnv": {
+    "prefix": "dcEnv",
+    "body": [
+      "      import api from '../server/api';",
+      "  import sleep from '../utils/sleep';",
+      "",
+      "  const online = {",
+      "    request: async json => {",
+      "      return await api.getData('/customer/$1', json);",
+      "    },",
+      "  };",
+      "",
+      "  const mockResponses = [",
+      "    {",
+      "      failure: {message: 'mockError', sc_trace_id: 'a0b1c2d3'},",
+      "    },",
+      "    {",
+      "      success: {},",
+      "    },",
+      "  ];",
+      "  let mockResponsesID = 0;",
+      "",
+      "  const offline = {",
+      "    request: async () => {",
+      "      await sleep();",
+      "      let mockResponse = mockResponses[mockResponsesID];",
+      "      mockResponsesID = (mockResponsesID + 1) % mockResponses.length;",
+      "      if (mockResponse.success) {",
+      "        return mockResponse.success;",
+      "      } else {",
+      "        throw mockResponse.failure;",
+      "      }",
+      "    },",
+      "  };",
+      "",
+      "  const current = isOnline => {",
+      "    return isOnline ? online : offline;",
+      "  };",
+      "",
+      "  export {online, offline, current};"
+    ]
   }
 }
