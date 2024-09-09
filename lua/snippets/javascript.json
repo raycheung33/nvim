@@ -277,5 +277,10 @@
       "",
       "  export {online, offline, current};"
     ]
+  },
+
+  "dcSubview": {
+    "prefix": "dcSubview",
+    "body": ["const $1 = observer(()=>(<View></View>))"]
   }
 }
