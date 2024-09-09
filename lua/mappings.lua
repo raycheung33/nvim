@@ -54,6 +54,5 @@ map("v", "3", "<Esc>:3tabn<CR>", opts)
 map("v", "4", "<Esc>:4tabn<CR>", opts)
 map("v", "5", "<Esc>:5tabn<CR>", opts)
 
--- Map space fe to open file explorer
-map("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)
-map("v", "<leader>fe", "<Esc>:NvimTreeToggle<CR>", opts)
+-- Map space e to open file explorer in visual mode
+map("v", "<leader>e", "<Esc>:NvimTreeFocus<CR>", opts)
