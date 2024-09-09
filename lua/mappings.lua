@@ -47,8 +47,13 @@ map("n", "1", ":1tabn<CR>", opts)
 map("n", "2", ":2tabn<CR>", opts)
 map("n", "3", ":3tabn<CR>", opts)
 map("n", "4", ":4tabn<CR>", opts)
+map("n", "5", ":5tabn<CR>", opts)
+map("v", "1", "<Esc>:1tabn<CR>", opts)
+map("v", "2", "<Esc>:2tabn<CR>", opts)
+map("v", "3", "<Esc>:3tabn<CR>", opts)
+map("v", "4", "<Esc>:4tabn<CR>", opts)
+map("v", "5", "<Esc>:5tabn<CR>", opts)
 
 -- Map space fe to open file explorer
 map("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)
 map("v", "<leader>fe", "<Esc>:NvimTreeToggle<CR>", opts)
-
