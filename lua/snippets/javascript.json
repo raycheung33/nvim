@@ -145,7 +145,7 @@
     "body": [
       "        const saveAreaInsets = useSafeAreaInsets();",
       "",
-      "  const renderItem = ({item}) => <ItemView item={item} />;",
+      "  const renderItem = ({item}) => <ItemView self={item} />;",
       "  const keyExtractor = item => item.id;",
       "",
       "  return (",
