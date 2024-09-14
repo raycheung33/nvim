@@ -149,7 +149,6 @@
       "  const keyExtractor = item => item.id;",
       "",
       "  return (",
-      "    <View style={{flex: 1}}>",
       "      <FlatList",
       "        data={self.items.slice()}",
       "        renderItem={renderItem}",
@@ -160,7 +159,6 @@
       "          gap: Style.gap,",
       "        }}",
       "      />",
-      "    </View>",
       "  );"
     ]
   },
