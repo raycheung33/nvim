@@ -285,5 +285,9 @@
   "dcViewObserver": {
     "prefix": "dcViewObserver",
     "body": ["      const $1 = observer(() => (", "      <$2></$2>", "    ));"]
+  },
+  "dcSkeleton": {
+    "prefix": "dcSkeleton",
+    "body": ["<Sk show={isLoading}>"]
   }
 }
