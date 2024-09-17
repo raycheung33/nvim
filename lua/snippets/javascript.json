@@ -280,5 +280,10 @@
   "dcSubview": {
     "prefix": "dcSubview",
     "body": ["const $1 = observer(()=>(<View></View>))"]
+  },
+
+  "dcViewObserver": {
+    "prefix": "dcViewObserver",
+    "body": ["      const $1 = observer(() => (", "      <$2></$2>", "    ));"]
   }
 }
