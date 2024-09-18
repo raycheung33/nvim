@@ -312,6 +312,7 @@
       "      throw mockResponse.failure;",
       "    }",
       "  },",
+      "  skeleton: skeleton,",
       "};",
       "",
       "const current = isOnline => {",
