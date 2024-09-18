@@ -358,7 +358,9 @@
     "prefix": "dcSaveAreaInsets",
     "body": [
       "      import {useSafeAreaInsets} from 'react-native-safe-area-context';",
-      "    const saveAreaInsets = useSafeAreaInsets();"
+      "      import {useHeaderHeight} from '@react-navigation/elements';",
+      "    const saveAreaInsets = useSafeAreaInsets();",
+      "        const headerHeight = useHeaderHeight();"
     ]
   }
 }
