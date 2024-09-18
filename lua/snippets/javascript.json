@@ -352,5 +352,13 @@
       "import RequestState from '../utils/RequestState';",
       "import ErrorMessage from '../services/ErrorMessage';"
     ]
+  },
+
+  "dcSaveAreaInsets": {
+    "prefix": "dcSaveAreaInsets",
+    "body": [
+      "      import {useSafeAreaInsets} from 'react-native-safe-area-context';",
+      "    const saveAreaInsets = useSafeAreaInsets();"
+    ]
   }
 }

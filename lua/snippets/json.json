@@ -4,7 +4,9 @@
     "body": [
       "  \"dc$1\": {",
       "    \"prefix\": \"dc$1\",",
-      "    \"body\": [$CLIPBOARD]",
+      "    \"body\": [",
+      "$CLIPBOARD",
+      "]",
       "  },"
     ]
   }
