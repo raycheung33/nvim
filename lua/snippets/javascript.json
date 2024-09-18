@@ -133,7 +133,26 @@
 
   "dcFlow": {
     "prefix": "dcFlow",
-    "body": ["request: flow(function* request() {", "$1", "}),"]
+    "body": [
+      "    request: flow(function* request() {",
+      "      self.requestState = 'loading';",
+      "      const env = getEnv(self).$1;",
+      "      self.updateStore(env.skeleton);",
+      "      try {",
+      "        const response = yield env.request();",
+      "        self.updateStore(response);",
+      "        self.requestState = 'done';",
+      "      } catch (error) {",
+      "        const str = getRoot(self).str;",
+      "        self.errorMessage = ErrorMessage.map(str, error);",
+      "        self.requestState = 'error';",
+      "        console.error('error =', error);",
+      "      }",
+      "    }),",
+      "    updateStore(response) {",
+      "      const {$2} = response;",
+      "    },"
+    ]
   },
 
   "dcComponent": {
@@ -312,8 +331,25 @@
     "prefix": "dcViewObserver",
     "body": ["      const $1 = observer(() => (", "      <$2></$2>", "    ));"]
   },
+
   "dcSkeleton": {
     "prefix": "dcSkeleton",
     "body": ["<Sk show={isLoading}>"]
+  },
+
+  "dcRequestState": {
+    "prefix": "dcRequestState",
+    "body": [
+      "      requestState: RequestState,",
+      "      errorMessage: tt.optional(tt.string, ''),"
+    ]
+  },
+
+  "dcImportRequestState": {
+    "prefix": "dcImportRequestState",
+    "body": [
+      "import RequestState from '../utils/RequestState';",
+      "import ErrorMessage from '../services/ErrorMessage';"
+    ]
   }
 }
