@@ -362,5 +362,17 @@
       "    const saveAreaInsets = useSafeAreaInsets();",
       "        const headerHeight = useHeaderHeight();"
     ]
+  },
+
+  "dcIsTransitioning": {
+    "prefix": "dcIsTransitioning",
+    "body": [
+      "    const [isTransitioning, setIsTransitioning] = React.useState(false);",
+      "    useFocusEffect(",
+      "      React.useCallback(() => {",
+      "        setIsTransitioning(false);",
+      "      }, []),",
+      "    );"
+    ]
   }
 }
