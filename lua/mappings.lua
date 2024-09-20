@@ -56,3 +56,6 @@ map("v", "5", "<Esc>:5tabn<CR>", opts)
 
 -- Map space e to open file explorer in visual mode
 map("v", "<leader>e", "<Esc>:NvimTreeFocus<CR>", opts)
+
+-- Map space r to change varible name
+map("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
