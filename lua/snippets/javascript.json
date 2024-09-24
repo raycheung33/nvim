@@ -146,7 +146,6 @@
       "        const str = getRoot(self).str;",
       "        self.errorMessage = ErrorMessage.map(str, error);",
       "        self.requestState = 'error';",
-      "        console.error('error =', error);",
       "      }",
       "    }),",
       "    updateStore(response) {",
