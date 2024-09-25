@@ -365,7 +365,11 @@
 
   "dcViewObserver": {
     "prefix": "dcViewObserver",
-    "body": ["      const $1 = observer(() => (", "      <$2></$2>", "    ));"]
+    "body": [
+      "      const $1 = observer(() => (",
+      "      <View><DCText></DCText></View>",
+      "    ));"
+    ]
   },
 
   "dcSkeleton": {
