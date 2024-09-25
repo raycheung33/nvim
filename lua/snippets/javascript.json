@@ -231,6 +231,42 @@
     ]
   },
 
+  "dcSectionList": {
+    "prefix": "dcSectionList",
+    "body": [
+      "    const renderSectionHeader = ({section: {title}}) => {",
+      "      return (",
+      "        <View",
+      "          style={{",
+      "            paddingLeft: Style.gap,",
+      "            paddingRight: Style.gap,",
+      "            paddingTop: 2,",
+      "            paddingBottom: 2,",
+      "            backgroundColor: color.bg,",
+      "          }}>",
+      "          <DCText style={{...Style.font.title}}>{title}</DCText>",
+      "        </View>",
+      "      );",
+      "    };",
+      "",
+      "    const renderItem = ({item}) => <View></View>;",
+      "    const keyExtractor = section => section.id;",
+      "",
+      "    return (",
+      "      <SectionList",
+      "        columnWrapperStyle={{gap: Style.gap}}",
+      "        sections={self.sections.slice()}",
+      "        renderSectionHeader={renderSectionHeader}",
+      "        renderItem={renderItem}",
+      "        keyExtractor={keyExtractor}",
+      "        contentContainerStyle={{",
+      "          gap: Style.gap,",
+      "        }}",
+      "      />",
+      "    );"
+    ]
+  },
+
   "dcItemView": {
     "prefix": "dcItemView",
     "body": [
