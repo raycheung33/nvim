@@ -380,7 +380,7 @@
   "dcRequestState": {
     "prefix": "dcRequestState",
     "body": [
-      "      requestState: RequestState,",
+      "      requestState: RequestState.loading,",
       "      errorMessage: tt.optional(tt.string, ''),"
     ]
   },
@@ -412,6 +412,18 @@
       "        setIsTransitioning(false);",
       "      }, []),",
       "    );"
+    ]
+  },
+
+  "dcShowNextView": {
+    "prefix": "dcShowNextView",
+    "body": [
+      "      showNextView() {",
+      "        const root = getRoot(self);",
+      "        const store = $1Store.create({});",
+      "        self.detailStore = store;",
+      "        root.navigation.goTo('$1View', store);",
+      "      },"
     ]
   }
 }
