@@ -181,8 +181,6 @@
   "dcFlatList": {
     "prefix": "dcFlatList",
     "body": [
-      "        const saveAreaInsets = useSafeAreaInsets();",
-      "",
       "  const renderItem = ({item}) => <ItemView self={item} />;",
       "  const keyExtractor = item => item.id;",
       "",
@@ -192,8 +190,6 @@
       "        renderItem={renderItem}",
       "        keyExtractor={keyExtractor}",
       "        contentContainerStyle={{",
-      "          paddingTop: saveAreaInsets.top,",
-      "          paddingBottom: saveAreaInsets.bottom,",
       "          gap: Style.gap,",
       "        }}",
       "      />",
