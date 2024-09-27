@@ -37,7 +37,7 @@
       "  React.useLayoutEffect(() => {",
       "    navigation.setOptions({",
       "      headerTitle: str.t('$2'),",
-      "      headerLargeTitle: true,",
+      "      headerLargeTitle: false,",
       "      headerStyle: {",
       "        backgroundColor: color.bg,",
       "      },",
