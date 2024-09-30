@@ -148,6 +148,7 @@
       "        self.requestState = 'error';",
       "      }",
       "    }),",
+      "",
       "    updateStore(response) {",
       "      const {$2} = response;",
       "    },"
