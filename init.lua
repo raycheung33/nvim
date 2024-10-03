@@ -27,7 +27,7 @@ require("lazy").setup({
 
 -- load lsp
 require("lspconfig").emmet_ls.setup {}
-require("lspconfig").tsserver.setup {}
+require("lspconfig").ts_ls.setup {}
 
 -- ref: https://www.reddit.com/r/neovim/comments/16ugm8l/vs_codelike_expand_selection_via_treesitter/
 require("nvim-treesitter.configs").setup {
