@@ -422,5 +422,10 @@
       "        root.navigation.goTo('$1View', store);",
       "      },"
     ]
+  },
+
+  "dcViewStyle": {
+    "prefix": "dcViewStyle",
+    "body": ["<View style={{}} >", "$CLIPBOARD", "</View>"]
   }
 }
