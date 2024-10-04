@@ -427,5 +427,10 @@
   "dcViewStyle": {
     "prefix": "dcViewStyle",
     "body": ["<View style={{}} >", "$CLIPBOARD", "</View>"]
+  },
+
+  "dcArrayMap": {
+    "prefix": "dcArrayMap",
+    "body": ["Array.from({length: $1}).map((_, i) => $2)"]
   }
 }
