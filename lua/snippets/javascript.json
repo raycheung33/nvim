@@ -32,7 +32,7 @@
       "  const root = useStore(RootStore);",
       "  const str = root.str;",
       "  const color = root.theme.color;",
-      "  const self = root.navigation.storeFromKey(route.params.storeKey);",
+      "  const self = root.navigation.storeFromRoute(route);",
       "",
       "  React.useLayoutEffect(() => {",
       "    navigation.setOptions({",
