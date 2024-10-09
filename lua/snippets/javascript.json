@@ -432,5 +432,15 @@
   "dcArrayMap": {
     "prefix": "dcArrayMap",
     "body": ["Array.from({length: $1}).map((_, i) => $2)"]
+  },
+
+  "dcPushToView": {
+    "prefix": "dcPushToView",
+    "body": [
+      "const root = getRoot(self);",
+      "const store = root.navigation.createStore($1Store, {});",
+      "self.$2Store = store;",
+      "root.navigation.pushToView('$1View', store);"
+    ]
   }
 }

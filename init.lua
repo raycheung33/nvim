@@ -28,10 +28,10 @@ require("lazy").setup({
 -- load lsp
 require("lspconfig").emmet_ls.setup {}
 require("lspconfig").ts_ls.setup {}
+require("lspconfig").prismals.setup {}
 
 -- ref: https://www.reddit.com/r/neovim/comments/16ugm8l/vs_codelike_expand_selection_via_treesitter/
-require("nvim-treesitter.configs").setup {
-}
+require("nvim-treesitter.configs").setup {}
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
@@ -44,15 +44,16 @@ vim.schedule(function()
   require "mappings"
 end)
 
-require('telescope').setup{ 
-  defaults = { 
-    file_ignore_patterns = { 
+require("telescope").setup {
+  defaults = {
+    file_ignore_patterns = {
       "node_modules",
       "ios/Pods",
       "vendor/bundle",
-      "android/app/build"
-    }
-  }
+      "android/app/build",
+    },
+  },
 }
 
 vim.g.vscode_snippets_path = "~/.config/nvim/lua/snippets"
+

@@ -60,4 +60,9 @@ return {
       }
     end,
   },
+
+  {
+    "prisma/vim-prisma",
+    ft = "prisma", -- Load the plugin only for Prisma files
+  },
 }
