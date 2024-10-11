@@ -11,7 +11,7 @@
       "",
       "const Store = tt",
       ".model('$1', {",
-      "//",
+      "id: tt.optional(tt.identifier, ''),",
       "})",
       "",
       "export default Store;"
