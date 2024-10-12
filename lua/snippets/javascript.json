@@ -191,6 +191,8 @@
       "        renderItem={renderItem}",
       "        keyExtractor={keyExtractor}",
       "        contentContainerStyle={{",
+      "          paddingTop: Style.gap,",
+      "          paddingBottom: Style.gap,",
       "          gap: Style.gap,",
       "        }}",
       "      />",
