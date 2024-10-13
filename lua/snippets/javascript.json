@@ -134,6 +134,10 @@
   "dcFlow": {
     "prefix": "dcFlow",
     "body": [
+      "    afterAttach() {",
+      "      self.request();",
+      "    },",
+      "",
       "    request: flow(function* request() {",
       "      self.requestState = 'loading';",
       "      const env = getEnv(self).$1;",
