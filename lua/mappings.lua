@@ -48,11 +48,16 @@ map("n", "2", ":2tabn<CR>", opts)
 map("n", "3", ":3tabn<CR>", opts)
 map("n", "4", ":4tabn<CR>", opts)
 map("n", "5", ":5tabn<CR>", opts)
+map("n", "6", ":6tabn<CR>", opts)
+map("n", "7", ":7tabn<CR>", opts)
+
 map("v", "1", "<Esc>:1tabn<CR>", opts)
 map("v", "2", "<Esc>:2tabn<CR>", opts)
 map("v", "3", "<Esc>:3tabn<CR>", opts)
 map("v", "4", "<Esc>:4tabn<CR>", opts)
 map("v", "5", "<Esc>:5tabn<CR>", opts)
+map("v", "6", "<Esc>:6tabn<CR>", opts)
+map("v", "7", "<Esc>:7tabn<CR>", opts)
 
 -- Map space e to open file explorer in visual mode
 map("v", "<leader>e", "<Esc>:NvimTreeFocus<CR>", opts)

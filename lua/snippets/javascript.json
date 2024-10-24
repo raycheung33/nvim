@@ -448,5 +448,16 @@
       "self.$2Store = store;",
       "root.navigation.pushToView('$1View', store);"
     ]
+  },
+
+  "dcRequestView": {
+    "prefix": "dcRequestView",
+    "body": [
+      "    const requestView = RequestView({self: self});",
+      "    if (requestView) {",
+      "      return requestView;",
+      "    }",
+      "    return <DoneView />;"
+    ]
   }
 }
