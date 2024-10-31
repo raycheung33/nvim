@@ -25,8 +25,8 @@
       "import {View} from 'react-native';",
       "import {useStore} from 'mobx-store-provider';",
       "import {observer} from 'mobx-react-lite';",
-      "import RootStore from '../root/Store';",
-      "import DCText from '../components/DCText';",
+      "import RootStore from '../../app/root/Store';",
+      "import DCText from '../../app/components/DCText';",
       "",
       "const DCView = ({route, navigation}) => {",
       "  const root = useStore(RootStore);",
@@ -86,9 +86,9 @@
     "prefix": "dcTab",
     "body": [
       "import * as React from 'react';",
-      "import RootStore from '../root/Store';",
+      "import RootStore from '../../app/root/Store';",
       "import { useStore } from 'mobx-store-provider';",
-      "import Stack from '../app/Stack';",
+      "import Stack from '../../app/app/Stack';",
       "import $1 from './View';",
       "import { observer } from 'mobx-react-lite';",
       "",
@@ -166,7 +166,7 @@
       "import {View} from 'react-native'",
       "import {useStore} from 'mobx-store-provider';",
       "import {observer} from 'mobx-react-lite';",
-      "import RootStore from '../root/Store';",
+      "import RootStore from '../../app/root/Store';",
       "",
       "const DCView = props => {",
       "  const root = useStore(RootStore);",
@@ -277,8 +277,8 @@
       "  import {View} from 'react-native';",
       "  import {useStore} from 'mobx-store-provider';",
       "  import {observer} from 'mobx-react-lite';",
-      "  import RootStore from '../root/Store';",
-      "  import DCText from '../components/DCText';",
+      "  import RootStore from '../../app/root/Store';",
+      "  import DCText from '../../app/components/DCText';",
       "",
       "  const DCView = ({self}) => {",
       "    const root = useStore(RootStore);",
@@ -314,8 +314,8 @@
   "dcEnv": {
     "prefix": "dcEnv",
     "body": [
-      "import api from '../server/api';",
-      "import sleep from '../utils/sleep';",
+      "import api from '../../app/server/api';",
+      "import sleep from '../../app/utils/sleep';",
       "",
       "const online = {",
       "  request: async json => {",
@@ -391,8 +391,8 @@
   "dcImportRequestState": {
     "prefix": "dcImportRequestState",
     "body": [
-      "import RequestState from '../utils/RequestState';",
-      "import ErrorMessage from '../services/ErrorMessage';"
+      "import RequestState from '../../app/utils/RequestState';",
+      "import ErrorMessage from '../../app/services/ErrorMessage';"
     ]
   },
 
