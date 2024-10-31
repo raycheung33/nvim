@@ -57,3 +57,10 @@ require("telescope").setup {
 
 vim.g.vscode_snippets_path = "~/.config/nvim/lua/snippets"
 
+-- breadcrumbs
+require("nvim-navic").setup {
+  lsp = {
+    auto_attach = true,
+  },
+}
+require("breadcrumbs").setup()
