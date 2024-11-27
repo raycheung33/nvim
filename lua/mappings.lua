@@ -35,9 +35,10 @@ map("n", "<Esc>", ":noh<CR>", opts)
 -- Map d and dd to black hole instead of register
 map("n", "d", '"_d', opts)
 map("n", "dd", '"_dd', opts)
+map("n", "x", '"_x', opts)
 map("v", "d", '"_d', opts)
 map("v", "dd", '"_dd', opts)
-
+map("v", "x", '"_x', opts)
 
 -- Map yank to yank and keep selection
 map("v", "y", "ygv", opts)
