@@ -141,7 +141,6 @@
       "    request: flow(function* request() {",
       "      self.requestState = 'loading';",
       "      const env = getEnv(self).$1;",
-      "      self.updateStore(env.skeleton);",
       "      try {",
       "        const response = yield env.request();",
       "        self.updateStore(response);",
@@ -437,7 +436,7 @@
 
   "dcArrayMap": {
     "prefix": "dcArrayMap",
-    "body": ["Array.from({length: $1}).map((_, i) => $2)"]
+    "body": ["Array.from({length: $1}).map((_, i) => ({hello: 'world'}))"]
   },
 
   "dcPushToView": {
