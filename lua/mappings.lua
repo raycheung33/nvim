@@ -36,9 +36,12 @@ map("n", "<Esc>", ":noh<CR>", opts)
 map("n", "d", '"_d', opts)
 map("n", "dd", '"_dd', opts)
 map("n", "x", '"_x', opts)
+map("n", "c", '"_c', opts)
+
 map("v", "d", '"_d', opts)
 map("v", "dd", '"_dd', opts)
 map("v", "x", '"_x', opts)
+map("v", "c", '"_c', opts)
 
 -- Map yank to yank and keep selection
 map("v", "y", "ygv", opts)
@@ -68,3 +71,4 @@ map("v", "<leader>e", "<Esc>:NvimTreeFocus<CR>", opts)
 
 -- Map space r to change varible name
 map("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+map("v", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
