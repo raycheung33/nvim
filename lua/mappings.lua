@@ -78,3 +78,7 @@ map("v", "<leader>e", "<Esc>:NvimTreeFocus<CR>", opts)
 -- Map space r to change varible name
 map("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 map("v", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+
+-- Map Cmd-J and Cmd-K to move cursor down and up 10 lines 
+map("n", "[custom_j", "10j", opts)
+map("n", "[custom_k", "10k", opts)
