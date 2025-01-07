@@ -64,3 +64,10 @@ require("nvim-navic").setup {
   },
 }
 require("breadcrumbs").setup()
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function()
+    require("conform").format()
+  end,
+})
