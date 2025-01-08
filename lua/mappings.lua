@@ -1,6 +1,11 @@
 require "nvchad.mappings"
 
 -- add yours here
+local clientCommand = ":cd ~/hkust/DCOZ/<CR>"
+local serverCommand = ":cd ~/hkust/ServerDC/<CR>"
+local nvimCommand = ":cd ~/.config/nvim/<CR>"
+
+local mainCommand = clientCommand
 
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
@@ -50,27 +55,30 @@ map("v", "y", "ygv", opts)
 map("v", "<leader>z", ':s/\\(.*\\)\\n/\\"\\1",\\r<CR>:noh<CR>', opts)
 
 -- Map numbers to tabs
-map("n", "1", ":cd ~/hkust/ServerDC/<CR>:1tabn<CR>", opts)
-map("n", "2", ":cd ~/hkust/ServerDC/<CR>:2tabn<CR>", opts)
-map("n", "3", ":cd ~/hkust/ServerDC/<CR>:3tabn<CR>", opts)
-map("n", "4", ":cd ~/hkust/DCOZ/<CR>:4tabn<CR>", opts)
-map("n", "5", ":cd ~/hkust/DCOZ/<CR>:5tabn<CR>", opts)
-map("n", "6", ":cd ~/hkust/DCOZ/<CR>:6tabn<CR>", opts)
-map("n", "7", ":cd ~/hkust/DCOZ/<CR>:7tabn<CR>", opts)
-map("n", "8", ":cd ~/hkust/DCOZ/<CR>:8tabn<CR>", opts)
-map("n", "9", ":cd ~/hkust/DCOZ/<CR>:9tabn<CR>", opts)
-map("n", "0", ":cd ~/.config/nvim/<CR>:10tabn<CR>", opts)
+map("n", "1", serverCommand .. ":1tabn<CR>", opts)
+map("n", "2", serverCommand .. ":2tabn<CR>", opts)
+map("n", "3", serverCommand .. ":3tabn<CR>", opts)
+map("n", "4", clientCommand .. ":4tabn<CR>", opts)
+map("n", "5", clientCommand .. ":5tabn<CR>", opts)
+map("n", "6", clientCommand .. ":6tabn<CR>", opts)
+map("n", "7", clientCommand .. ":7tabn<CR>", opts)
+map("n", "8", clientCommand .. ":8tabn<CR>", opts)
+map("n", "9", clientCommand .. ":9tabn<CR>", opts)
+map("n", "0", nvimCommand .. ":10tabn<CR>", opts)
 
-map("v", "1", "<Esc>:cd ~/hkust/ServerDC/<CR>:1tabn<CR>", opts)
-map("v", "2", "<Esc>:cd ~/hkust/ServerDC/<CR>:2tabn<CR>", opts)
-map("v", "3", "<Esc>:cd ~/hkust/ServerDC/<CR>:3tabn<CR>", opts)
-map("v", "4", "<Esc>:cd ~/hkust/DCOZ/<CR>:4tabn<CR>", opts)
-map("v", "5", "<Esc>:cd ~/hkust/DCOZ/<CR>:5tabn<CR>", opts)
-map("v", "6", "<Esc>:cd ~/hkust/DCOZ/<CR>:6tabn<CR>", opts)
-map("v", "7", "<Esc>:cd ~/hkust/DCOZ/<CR>:7tabn<CR>", opts)
-map("v", "8", "<Esc>:cd ~/hkust/DCOZ/<CR>:8tabn<CR>", opts)
-map("v", "9", "<Esc>:cd ~/hkust/DCOZ/<CR>:9tabn<CR>", opts)
-map("v", "0", "<Esc>:cd ~/.config/nvim/<CR>:10tabn<CR>", opts)
+map("v", "1", "<Esc>" .. serverCommand .. ":1tabn<CR>", opts)
+map("v", "2", "<Esc>" .. serverCommand .. ":2tabn<CR>", opts)
+map("v", "3", "<Esc>" .. serverCommand .. ":3tabn<CR>", opts)
+map("v", "4", "<Esc>" .. clientCommand .. ":4tabn<CR>", opts)
+map("v", "5", "<Esc>" .. clientCommand .. ":5tabn<CR>", opts)
+map("v", "6", "<Esc>" .. clientCommand .. ":6tabn<CR>", opts)
+map("v", "7", "<Esc>" .. clientCommand .. ":7tabn<CR>", opts)
+map("v", "8", "<Esc>" .. clientCommand .. ":8tabn<CR>", opts)
+map("v", "9", "<Esc>" .. clientCommand .. ":9tabn<CR>", opts)
+map("v", "0", "<Esc>" .. nvimCommand .. ":10tabn<CR>", opts)
+
+map("n", "<leader>q", mainCommand .. ":qa<CR>", opts)
+map("v", "<leader>q", mainCommand .. ":qa<CR>", opts)
 
 -- Map space e to open file explorer in visual mode
 map("v", "<leader>e", "<Esc>:NvimTreeFocus<CR>", opts)
