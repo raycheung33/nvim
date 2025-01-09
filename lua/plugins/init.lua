@@ -61,8 +61,12 @@ return {
     end,
   },
 
+  -- show lines between { and }
   {
-    "prisma/vim-prisma",
-    ft = "prisma", -- Load the plugin only for Prisma files
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
   },
 }
