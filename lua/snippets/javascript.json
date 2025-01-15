@@ -438,8 +438,8 @@
     "body": ["Array.from({length: $1}).map((_, i) => ({id: `Id${i}`}))"]
   },
 
-  "dcPushToView": {
-    "prefix": "dcPushToView",
+  "dcGoToView": {
+    "prefix": "dcGoToView",
     "body": [
       "const root = getRoot(self);",
       "const store = root.navigation.createStore($1Store, {});",
