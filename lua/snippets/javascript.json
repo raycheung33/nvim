@@ -448,6 +448,20 @@
     ]
   },
 
+  "dcCallback": {
+    "prefix": "dcCallback",
+    "body": [
+      "    .volatile(_ => ({",
+      "      $1Callback: tt.custom,",
+      "    }))",
+      "    .actions(self => ({",
+      "      updateCallback$1($1Callback) {",
+      "        self.$1Callback = $1Callback;",
+      "      },",
+      "    }))"
+    ]
+  },
+
   "dcRequestView": {
     "prefix": "dcRequestView",
     "body": [
