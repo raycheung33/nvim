@@ -452,11 +452,11 @@
     "prefix": "dcCallback",
     "body": [
       "    .volatile(_ => ({",
-      "      $1Callback: tt.custom,",
+      "      callback$1: tt.custom,",
       "    }))",
       "    .actions(self => ({",
-      "      updateCallback$1($1Callback) {",
-      "        self.$1Callback = $1Callback;",
+      "      updateCallback$1(callback$1) {",
+      "        self.callback$1 = callback$1;",
       "      },",
       "    }))"
     ]
