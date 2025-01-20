@@ -448,8 +448,8 @@
     ]
   },
 
-  "dcCallback": {
-    "prefix": "dcCallback",
+  "dcVolatile": {
+    "prefix": "dcVolatile",
     "body": [
       "    .volatile(_ => ({",
       "      callback$1: tt.custom,",
